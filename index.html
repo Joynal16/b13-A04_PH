@@ -9,8 +9,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     <!--Font-Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        *{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
 
 
 </head>
@@ -21,16 +34,16 @@
         <h1 class="text-3xl font-bold mb-5">Job Application tracker</h1>
         <div class="grid grid-cols-3 sm: grid-cols-3  gap-4">
             <div class=" p-4 shadow-sm  rounded-lg">
-                <p class="text-[12px] font-bold">Total</p>
-                <p class="text-black font-bold text-[20px]" id="total">0</p>
+                <p class="text-[14px] font-bold">Total</p>
+                <p class="text-black font-bold font-family: 'Work Sans', sans-serif text-[24px]" id="total">0</p>
             </div>
             <div class=" p-4 shadow-sm  rounded-lg">
-                <p class="text-[12px] font-bold">Interview</p>
-                <p class="text-green-500 font-bold text-[20px]" id="interview">0</p>
+                <p class="text-[14px] font-bold">Interview</p>
+                <p class="text-green-500 font-bold font-family: 'Work Sans', sans-serif text-[24px]" id="interview">0</p>
             </div>
             <div class=" p-4 shadow-sm  rounded-lg">
-                <p class="text-[12px] font-bold">Rejected</p>
-                <p class="text-red-600 font-bold text-[20px]" id="rejected">0</p>
+                <p class="text-[14px] font-bold">Rejected</p>
+                <p class="text-red-600 font-bold font-family: 'Work Sans', sans-serif text-[24px]" id="rejected">0</p>
             </div>
         </div>
     </header>
@@ -45,26 +58,26 @@
         <div class="max-w-[1110px] mx-auto flex justify-between mb-5 mt-5">
             
             <div>
-                <h3 class="font-bold text-xl">Availables Jobs</h3>
+                <h3 class="font-bold text-2xl">Availables Jobs</h3>
             </div>
             <div class="flex justify-end gap-1">
-                <p class="text-black">8</p>
-                <p>jobs</p>
+                <p class="text-black text-lg">8</p>
+                <p class="text-lg">jobs</p>
             </div>
            
         </div>
         <div>
-            <button class="bg-blue-500 px-7 font-medium py-1 rounded-sm text-white text-[12px]" id="all-filter-btn">All</button>
-            <button class="bg-white font-medium shadow-sm px-5 py-1 rounded-sm text-[12px]"  id="interview-filter-btn">Interview</button>
-            <button class="bg-white font-medium shadow-sm px-5 py-1 rounded-sm text-[12px]"  id="rejected-filter-btn">Rejected</button>
+            <button class="bg-blue-500 px-9 font-medium py-2 rounded-sm text-white text-sm mr-2" id="all-filter-btn">All</button>
+            <button class="bg-white font-medium  shadow-sm px-5 py-2 rounded-sm text-sm mr-2"  id="interview-filter-btn">Interview</button>
+            <button class="bg-white font-medium shadow-sm px-5 py-2 rounded-sm text-sm"  id="rejected-filter-btn">Rejected</button>
         </div>
 
 
 
 
         <section id="all-cards" class="max-w-[1110px] space-y-6 mt-5">
-            <div class=" rounded-lg shadow-md">
-                <div class="bg-white p-6 flex justify-between ">
+            <div class="bg-gray-100 rounded-lg shadow-md">
+                <div class=" p-6 flex justify-between ">
                     <div class="">
                         <h1 class="text-xl font-bold">Mobile First Corp</h1>
                         <p class="text-gray-500">React Native Developer</p>
@@ -81,18 +94,18 @@ Full-time
  $130,000 - $175,000</p>
                </div>
                 <div class="p-6">
-                    <button class=" bg-blue-100 px-1 rounded-sm shadow-sm">NOT APPLIED</button>
-                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button class=" bg-blue-100 px-2 py-2 mb-2 rounded-sm shadow-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                 </div>
                  <div class="p-6">
-                    <button id="mobile-btn" class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 borde r-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button id="interview-btn" class="border-2 border-green-500  px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button id="rejected-btn" class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class=" p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">WebFlow Agency</h1>
                         <p class="text-gray-500">Web Designer & Developer</p>
@@ -107,19 +120,19 @@ Part-time
 •
  $80,000 - $120,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class=" p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">DataViz Solutions</h1>
                         <p class="text-gray-500">Data Visualization Specialist</p>
@@ -134,20 +147,20 @@ Part-time
  •
  $125,000 - $165,000</p>
                 <div class="p-6">
-                    <button class=" bg-blue-100 shadow-sm  px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                    <button class=" bg-blue-100 shadow-sm  px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
 </p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class="p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">CloudFirst Inc</h1>
                         <p class="text-gray-500">Backend Developer</p>
@@ -162,20 +175,20 @@ Part-time
  •
  $140,000 - $190,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class=" p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">Innovation Labs</h1>
                         <p class="text-gray-500">UI/UX Engineer</p>
@@ -190,20 +203,20 @@ Part-time
  •
  $110,000 - $150,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class=" p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">MegaCorp Solutions</h1>
                         <p class="text-gray-500">JavaScript Developer</p>
@@ -218,21 +231,21 @@ Full-time
 •
  $130,000 - $170,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
-                    <div class="shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class="shadow-md bg-gray-100">
+                <div class="p-6 flex justify-between">
                     <div class="">
-                        <h1 class="text-xl font-bold">StartupXYZ</h1>
+                        <h1 class="text-xl  font-bold">StartupXYZ</h1>
                         <p class="text-gray-500">Full Stack Engineer</p>
                     </div>
                     <div>
@@ -245,20 +258,20 @@ Full-time
 •
  $120,000 - $160,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 
 
 
             
-                    <div class=" shadow-md">
-                <div class="bg-white p-6 flex justify-between">
+                    <div class=" shadow-md bg-gray-100">
+                <div class=" p-6 flex justify-between">
                     <div class="">
                         <h1 class="text-xl font-bold">TechCorp Industries</h1>
                         <p class="text-gray-500">Senior Frontend Developer</p>
@@ -273,12 +286,12 @@ Full-time
 •
  $130,000 - $175,000</p>
                 <div class="p-6">
-                    <button class="shadow-sm bg-blue-100 px-1 rounded-sm">NOT APPLIED</button>
-                    <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <button class="shadow-sm bg-blue-100 px-2 py-2 mb-2 rounded-sm">NOT APPLIED</button>
+                    <p class="mb-[-16px]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
                  <div class="p-6">
-                    <button class="border-2 border-green-500 px-2 rounded-sm text-green-600 font-semibold mr-1">INTERVIEW</button>
-                    <button  class="border-2 border-red-500 px-2 text-red-500 rounded-sm font-semibold">REJECTED</button>
+                    <button class="border-2 border-green-500 px-2 py-1 rounded-sm text-green-600 font-semibold mr-1 hover:bg-green-200">INTERVIEW</button>
+                    <button  class="border-2 border-red-500 px-2 py-1 text-red-500 rounded-sm font-semibold hover:bg-red-200">REJECTED</button>
                 </div>
             </div>
 

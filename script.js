@@ -5,15 +5,19 @@ let rejected =document.getElementById("rejected");
 
 
 
-document.getElementById('mobile-btn')
+document.getElementById('interview-btn')
 .addEventListener('click', function(){
     // interview
     let interview =document.getElementById("interview");
     interview.innerText = parseInt(interview.innerText) + 1;
-    total.innerText = parseInt(total.innerText) + 1;
 
-    // rejected
+
+})
+
+document.getElementById('rejected-btn')
+.addEventListener('click', function(){
+
+      // rejected
     let rejected =document.getElementById("rejected");
     rejected.innerText = parseInt(rejected.innerText) + 1;
-    total.innerText = parseInt(total.innerText) + 1;
 })

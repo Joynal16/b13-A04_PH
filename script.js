@@ -45,27 +45,26 @@ function toggleStyle(id){
 
 
 mainContainer.addEventListener('click', function(event){
-    console.log(event.target.parentNode.parentNode);
+    const parentNode = event.target.parentNode.parentNode;
+    const mobileFirst = parentNode.querySelector('.mobile-first').innerText;
+    const reactNative = parentNode.querySelector('.react-native').innerText;
+    const deleteBtn = parentNode.querySelector('.delete-btn-1').innerText;
+    const remoteFirst = parentNode.querySelector('.remote-1').innerText;
+    const statusFirst = parentNode.querySelector('.status').innerText;
+    const noteFirst = parentNode.querySelector('.note-1').innerText;
+
+   //console.log(mobileFirst,reactNative,deleteBtn,remoteFirst,statusFirst,noteFirst);
+
+   const cardInfo ={
+      mobileFirst,
+      reactNative,
+      deleteBtn,
+      remoteFirst,
+      statusFirst,
+      noteFirst
+   }
+
+   console.log(cardInfo);
 
 });
 
-
-
-
-
-// document.getElementById('interview-btn')
-// .addEventListener('click', function(){
-//     // interview
-//     let interview =document.getElementById("interview");
-//     interview.innerText = parseInt(interview.innerText) + 1;
-
-
-// })
-
-// document.getElementById('rejected-btn')
-// .addEventListener('click', function(){
-
-//       // rejected
-//     let rejected =document.getElementById("rejected");
-//     rejected.innerText = parseInt(rejected.innerText) + 1;
-// })
